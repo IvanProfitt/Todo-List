@@ -1,7 +1,7 @@
 const taskList =[];
 const revealForm = document.getElementById('revealForm');
 const toDoForm = document.getElementById('todoForm');
-const toDoFormModal = document.getElementById("formQuestions");
+const toDoFormModal = document.getElementById("formModal");
 const addTodo = document.getElementById("addToto");
 const todoDiv=document.getElementById("todoDiv");
 let counter = 0;
@@ -82,10 +82,10 @@ revealForm.addEventListener("click", ()=>{
     toDoFormModal.classList.add("show");
 })
 
-todoForm.addEventListener("click", ()=>{
-    if (event.target === todoForm) {
-    todoForm.classList.remove("show");
-    todoForm.classList.add("hide");
+toDoFormModal.addEventListener("click", ()=>{
+    if (event.target === toDoFormModal) {
+        toDoFormModal.classList.remove("show");
+        toDoFormModal.classList.add("hide");
     }
 
 })
@@ -100,7 +100,7 @@ toDoForm.addEventListener("submit", ()=>{
     var value1 = document.getElementById('formTitle').value;
     var value2 = document.getElementById('formDescription').value;
     var value3 = document.getElementById('formDueDate').value;
-    var value4 = document.getElementById('formPriority').checked;
+    var value4 = document.getElementById('formPriority').value;
     toDoForm.reset();
 
     const bookInitialization = new ToDo(value1,value2,value3,value4);

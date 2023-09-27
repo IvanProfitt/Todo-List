@@ -10,20 +10,17 @@
     <header>
 
     </header>
-    <div class="sidebar">
-        <div class="heading">
-            <h1>Todo List</h1>
-        </div>
-        <div class="topSidebar">
-            <button id="revealForm">Form</button>
-        </div>
-
-        <div class="bottomSidebar">
-            <p> add</p>
+    <div class="sidebarContainer">
+        <div class="sidebar">
+            <div class="heading">
+                <h1>Todo List</h1>
+            </div>
+            <div class="topSidebar">
+                <button id="revealForm">Form</button>
+            </div>
         </div>
     </div>
     <div class="mainStuff">
-
         <div class="pageContent">
             <div class="mainContent">
                 <div class="listHeading">
@@ -44,10 +41,11 @@
 
 
 
-    <div class="formQuestions hide" id="formQuestions">
+    <div class="formModal hide" id="formModal">
+    <div class="formQuestions" id="formQuestions">
         <form class="todoForm" id="todoForm">
             <div>
-                <label for="formTitle">Todo Name:</label>
+                <label for="formTitle">Name:</label>
                 <input type="text" class="text" name="formTitle" id="formTitle" required>
             </div>
             <div>
@@ -60,21 +58,22 @@
             </div>
             <div class="priorityRadio">
                 <label for="formTitle">Priority:</label>
-                <input type="radio" class="text" name="formTitle" id="formTitle" value="high">
+                <input type="radio" class="text" name="formTitle" id="formPriority" value="high">
                 <label for="html">High</label>
 
-                <input type="radio" class="text" name="formTitle" id="formTitle" value="medium">
+                <input type="radio" class="text" name="formTitle" id="formPriority value="medium">
                 <label for="html">Medium</label>
 
-                <input type="radio" class="text" name="formTitle" id="formTitle" value="low">
+                <input type="radio" class="text" name="formTitle" id="formPriority" value="low">
                 <label for="html">Low</label>
             </div>
             <div class="checkDiv">
-                <label for="formPriority">Done?</label>
-                <input type="checkbox" class="text" name="formPriority" id="formPriority">
+                <label for="formDone">Done?</label>
+                <input type="checkbox" class="text" name="formDone" id="formDone">
             </div>
             <button type="submit" id="submitButton" class="submitButton">Submit</button>
         </form>
+    </div>
     </div>
     <footer>
 

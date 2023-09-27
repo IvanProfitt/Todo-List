@@ -1,25 +1,63 @@
 
 html{
-    height:100%;
-    width: 100%;
+    height:auto;
+    width: auto;
+    overflow-x:hidden;
 }
 body{
-    font-family: Monterey;
-    background-color: #818cf8;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifS;
+    background-color: #FFFFF0;
     display:flex;
     width:100%;
     padding:0px;
     margin:0px;
     height:100%;
+    border: 1px solid black;
 }
+
+
+header{
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    -webkit-box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
+    -moz-box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
+    box-shadow: 0px 4px 7px 0px rgba(129,140,248,1); 
+}
+
 
 .sidebar{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-self:left;
-    min-width: 300px;
+    position:fixed;
     height:100%;
-    background-color: #1e1b4b;
+    min-width: 225px;
+    background-color: #ffe5b4;
+    -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.sidebar h1{
+    color:black;
+}
+
+.revealForm{
+
+}
+.pageContent{
+    display:flex;
+}
+
+.mainContent{
+    margin-left:225px;
+    width:auto;
+}
+
+.mainContent h2{
+    padding-left: 25px;
+    color: black;
 }
 
 .listHeading{
@@ -27,194 +65,16 @@ body{
     align-items: center;
     justify-items: center;
 }
-.sidebar h1{
-    color:white;
-}
-
-.priorityRadio{
-    display:Flex;
-}
-
-
-.buttonInput {
-    text-decoration: none; /* Remove default underline for links */
-  }
-  
-  .buttonDiv, .heading, .searchBar {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center content */
-  }
-  
-  .buttonDiv img, .heading img{
-    max-width: 100%; /* Make sure the image doesn't exceed the container width */
-    margin-right: 20px; /* Add spacing between the image and paragraph */
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(161deg) brightness(105%) contrast(106%);
-  }
-
-
-  a:visited{
-    color:white;
-  }
-  a:hover{
-    background-color: #06b6d4;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-
-.sidebarButton:hover{
-    background-color: #06b6d4;
-}
-
-.topSidebar{
-    margin-bottom:100px;
-    display: flex;
-    flex-direction: column;
-
-}
-.bottomSidebar{
-    display: flex;
-    flex-direction: column;     
-}
-
-
-.pageContent{
-    display:flex;
-}
-
-
-
-.topheader{
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    align-items:start;
-}
-
-.bottomheader{
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-}
-
-.rightButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    width:100px;
-    height:50px;
-    transition: background-color 0.3s ease;
-  
-  }
-  
-  .rightButton:hover {
-    background-color: #818cf8;
-  }
-  
-
-.splashInfo{
-    display: flex;
-}
-
-.profileText{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.hello{
-    margin: 20px 0px 5px 0px;
-}
-
-.profileName{
-    margin:0px;
-}
-
-.header{
-    display:flex;
-    flex-direction: column;
-    background-color:white;
-    -webkit-box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
--moz-box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
-box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
-    
-    
-    
-}
-
-.searchBar{
-    margin:10px;
-    align-self: top;
-    justify-self: center;
-    width:100%;
-}
-
-.search{
-    margin-right:5px;
-    margin-bottom:12px;
-}
-
-.searchInput{
-    width: 100%;
-    background-color: #d4d4d8;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    outline: none;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-.searchInput:hover{
-    background-color: #a1a1aa;
-
-}
-.profileInfo{
-    display: flex;
-    align-self:flex-end;
-    text-align: right;
-    margin-left:auto;
-
-}
-
-.notification{
-    margin:15px;
-}
-
-.profilePic{
-    margin:5px;
-}
-
-.profileInfo h2, img{
-    margin-left: auto;
-    margin-top:15px;
-    margin-left:30px;
-    margin-right:5rem;
-}
-
-
-.topButtons{
-    display:flex;
-    align-items: center;
-    justify-content:space-evenly;
-}
-.mainContent{
-    width:100%;
-}
 
 .tasks{
     display:flex;
     flex-direction: column;
     width:100%;
-    border: 1px solid black;
 }
+
 .taskDiv{
     display: flex;
+    flex-wrap:wrap;
     background-color: white;
     margin:50px;
     width:100%;
@@ -227,12 +87,6 @@ box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
 
 }
 
-.mainContent h2, .rightSidebar h2{
-    padding-left: 25px;
-}
-
-
-
 .taskDiv h2, p{
     margin:25px;
 }
@@ -241,8 +95,6 @@ box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
     background-color: #6366f1;
 
 }
-
-
 
 .formModal{
     display: flex;
@@ -257,13 +109,6 @@ box-shadow: 0px 4px 7px 0px rgba(129,140,248,1);
     background: rgba(0, 0, 0, 0.5);
     
 }
-
-label{
-    color:white;
-}
-
-
-
 .formQuestions{
     display: flex;
     flex-direction: column;
@@ -291,11 +136,20 @@ label{
 .formQuestions input:focus{
     background-color: #d3d3d3;
 }
+
+label{
+    color:white;
+}
+.priorityRadio{
+    display:Flex;
+}
+
 .checkDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 input[type="checkbox"] {
     align-self: center;
@@ -313,8 +167,7 @@ input[type="checkbox"] {
 
   }
 
-
-.hide{
+  .hide{
     transition:opacity .3s ease, visibility .3s ease;
     opacity:0;
     visibility: hidden;
