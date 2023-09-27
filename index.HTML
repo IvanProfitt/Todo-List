@@ -15,7 +15,7 @@
             <h1>Todo List</h1>
         </div>
         <div class="topSidebar">
-            <p>add</p>
+            <button id="revealForm">Form</button>
         </div>
 
         <div class="bottomSidebar">
@@ -26,29 +26,55 @@
 
         <div class="pageContent">
             <div class="mainContent">
-                <h2>What you need to do:</h2>
-                <div class="tasks">
+                <div class="listHeading">
+                    <h2>What you need to do:</h2>
+                </div>
+                <div class="tasks" id ="todoDiv">
                     <div class="taskDiv">
-                       <p>hi</p>
+                        <h2>Title</h2>
+                        <p>Description</p>
+                        <p>Date</p>
+                        <p>Completed?</p>
                     </div>
-                    <div class="taskDiv">
-                        <p>hi</p>
-                    </div>
-                    <div class="taskDiv">
-                        <p>hi</p>
-                    </div>
-                    <div class="taskDiv">
-                        <p>hi</p>
-                    </div>
-                    <div class="taskDiv">
-                        <p>hi</p>
-                    </div>
-                    <div class="taskDiv">
-                        <p>hi</p>
-                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+    <div class="formQuestions hide" id="formQuestions">
+        <form class="todoForm" id="todoForm">
+            <div>
+                <label for="formTitle">Todo Name:</label>
+                <input type="text" class="text" name="formTitle" id="formTitle" required>
+            </div>
+            <div>
+                <label for="formDescription">Description:</label>
+                <input type="text" class="text" name="formDescription" id="formDescription" required>
+            </div>
+            <div>
+                <label for="formDueDate">Due Date:</label>
+                <input type="date" class="text" name="formDueDate" id="formDueDate" required>
+            </div>
+            <div class="priorityRadio">
+                <label for="formTitle">Priority:</label>
+                <input type="radio" class="text" name="formTitle" id="formTitle" value="high">
+                <label for="html">High</label>
+
+                <input type="radio" class="text" name="formTitle" id="formTitle" value="medium">
+                <label for="html">Medium</label>
+
+                <input type="radio" class="text" name="formTitle" id="formTitle" value="low">
+                <label for="html">Low</label>
+            </div>
+            <div class="checkDiv">
+                <label for="formPriority">Done?</label>
+                <input type="checkbox" class="text" name="formPriority" id="formPriority">
+            </div>
+            <button type="submit" id="submitButton" class="submitButton">Submit</button>
+        </form>
     </div>
     <footer>
 
