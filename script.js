@@ -4,6 +4,9 @@ const toDoForm = document.getElementById('todoForm');
 const toDoFormModal = document.getElementById("formModal");
 const addTodo = document.getElementById("addToto");
 const todoDiv=document.getElementById("todoDiv");
+const detailsButton=document.getElementById("details");
+const descModal = document.getElementById("descModal");
+const closeDesc = document.getElementById("closeDesc");
 let counter = 0;
 
 
@@ -112,3 +115,14 @@ toDoForm.addEventListener("submit", ()=>{
 
 } )
 
+detailsButton.addEventListener("click", ()=>{
+    descModal.classList.remove("hide");
+    descModal.classList.toggle('transition');
+    descModal.classList.add("show");
+}) 
+
+closeDesc.addEventListener("click", ()=>{
+    descModal.classList.toggle('transition');
+    descModal.classList.add("hide");
+    descModal.classList.remove("show");
+}) 

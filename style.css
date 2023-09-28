@@ -75,6 +75,7 @@ header{
 .taskDiv{
     display: flex;
     flex-wrap:wrap;
+    align-items: center;
     background-color: white;
     margin:50px;
     width:100%;
@@ -91,12 +92,16 @@ header{
     margin:25px;
 }
 
+.taskDiv button{
+    
+}
+
 .taskDiv:hover{
     background-color: #6366f1;
 
 }
 
-.formModal{
+.formModal, .descriptionModal{
     display: flex;
     position:fixed;
     align-items: center;
