@@ -6,13 +6,12 @@ html{
 }
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifS;
-    background-color: #FFFFF0;
+    background-color: #D1DCE8;
     display:flex;
     width:100%;
     padding:0px;
     margin:0px;
     height:100%;
-    border: 1px solid black;
 }
 
 
@@ -34,13 +33,36 @@ header{
     position:fixed;
     height:100%;
     min-width: 225px;
-    background-color: #ffe5b4;
+    background-color: #B1BEC8;
     -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
 }
-.sidebar h1{
-    color:black;
+
+.sidebar button{
+    min-width:175px;
+    border:none;
+    transition: background-color .5s ease-out;
+}
+
+.sidebar button:hover{
+    background-color: #DEDEE0;
+}
+
+.topSidebar{
+    display:flex;
+    flex-direction: column;
+    margin:30px;
+    gap: 40px;
+
+}
+
+.bottomSidebar{
+    display:flex;
+    flex-direction: column;
+    margin:30px;
+    gap: 40px;
+
 }
 
 .revealForm{
@@ -57,7 +79,6 @@ header{
 
 .mainContent h2{
     padding-left: 25px;
-    color: black;
 }
 
 .listHeading{
@@ -93,12 +114,38 @@ header{
 }
 
 .taskDiv button{
-    
+    margin:25px;
+    border:none;
+}
+
+.details, .deleteDiv{
+    background-repeat: no-repeat;
+    height:30px;
+    width:30px;
+} 
+.details{
+    background-image:url("images/plus.svg");
+}
+
+.deleteDiv{
+    background-image:url("images/trash-can-outline.svg");
 }
 
 .taskDiv:hover{
-    background-color: #6366f1;
+    background-color: #DEDEE0;
 
+}
+
+.details:hover, .deleteDiv:hover{
+    transition: background-color .5s ease;
+    background-color: greenyellow;
+
+}
+
+.descriptionBox{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
 }
 
 .formModal, .descriptionModal{
@@ -112,8 +159,10 @@ header{
     left: 0;
     z-index: 999;
     background: rgba(0, 0, 0, 0.5);
-    
 }
+    
+
+
 .formQuestions{
     display: flex;
     flex-direction: column;

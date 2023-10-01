@@ -36,6 +36,17 @@ function addTodoToList(newTodo, index){
 
 
 function displayItem(index, reference){
+    /* Need to add:
+    #  Input checkbox
+    #  H2 Title
+    #  P date
+    #  details button
+    #  description modal
+    #  description box
+    #  p description
+    #  close modal button
+    #  Delete button
+    */
     const taskDiv=document.createElement("div");
 
     let taskName=document.createElement("h2");
